@@ -1,38 +1,617 @@
-.App {
+.container {
+  display: flex;
+  /* width: 100%;
+  height: 100vh; */
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.sidebar {
+  height: 1024px;
+  width: 305px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background: #f5f5f5;
+}
+
+.leftside {
+  position: absolute;
+  width: 1135px;
+  height: 1024px;
+  left: 305px;
+  top: 0px;
+  background: #ffffff;
+  box-shadow: -4px 0px 10px #e0e0e0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+
+.sidebarHeading p {
+  position: absolute;
+  width: 176px;
+  height: 29px;
+  left: 59px;
+  top: 27px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.addvehicleBtn {
+  position: absolute;
+  width: 258px;
+  height: 48px;
+  left: 23px;
+  top: 90px;
+  background: #424242 !important;
+  border-radius: 10px !important;
+}
+
+/* .addvehicleBtn .btnText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+} */
+
+.addvehicleBtn i {
+  position: absolute;
+  width: 16px;
+  height: 21px;
+  left: calc(50% - 16px / 2 - 59px);
+  top: calc(50% - 21px / 2 + 0.5px);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.vehicleList {
+  position: absolute;
+  width: 258px;
+  left: 23px;
+  top: 158px;
+}
+
+.vehicle1 {
+  width: 258px;
+  height: 48px;
+  background: #ffffff !important;
+  box-shadow: 0px 4px 5px #e0e0e0;
+  border-radius: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.vehicleListText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  position: absolute;
+  left: 20px;
+}
+
+.vehicle1 i {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  color: black;
+}
+
+.searchVehicle {
+  position: absolute;
+  width: 258px;
+  height: 249px;
+  top: 100px;
+  left: 100px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+/* Right page */
+
+.mainpage {
+  position: relative;
+}
+
+.vehicles {
+  position: absolute;
+  width: 71px;
+  height: 22px;
+  left: 0px;
+  top: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* identical to box height */
+
+  color: #616161;
+}
+
+.topBar {
+  position: absolute;
+  top: 23px;
+  left: 30px;
+}
+
+.topBarInner {
+  position: relative;
+}
+.topBar i {
+  position: absolute;
+  width: 9px;
+  height: 16px;
+  left: 88px;
+  top: 3px;
+
+  font-family: Font Awesome 5 Free;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+
+  /* identical to box height */
+
+  color: #616161;
+}
+
+.vehicleName {
+  position: absolute;
+  width: 75px;
+  height: 22px;
+  left: 114px;
+  top: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.part-2 {
+  position: absolute;
+  left: 30px;
+  top: 80px;
+}
+
+.vehicleStatus {
+  position: absolute;
+  width: 418px;
+  height: 257px;
+  left: 0px;
+  top: 0px;
+}
+
+.vehicleStatusBox {
+  position: absolute;
+  width: 418px;
+  height: 225px;
+  left: 0px;
+  top: 32px;
+
+  background: linear-gradient(
+    253.84deg,
+    #f5f5f5 0%,
+    #fafafa 100%,
+    #fafafa 100%
+  );
+  border-radius: 5px;
+}
+
+.vehicleStatusLeft {
+  position: relative;
+}
+
+.vehicleStatusText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.Elevation {
+  position: absolute;
+  width: 62px;
+  height: 10px;
+  left: 23px;
+  top: 29px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+
+.Temperature {
+  position: absolute;
+  width: 86px;
+  height: 10px;
+  left: 23px;
+  top: 74px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+.Locked {
+  position: absolute;
+  width: 49px;
+  height: 10px;
+  left: 23px;
+  top: 119px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+
+.Battery {
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  left: 23px;
+  top: 164px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+
+.ElevationValue {
+  position: absolute;
+  width: 39px;
+  height: 10px;
+  left: 120px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+.TemperatureValue {
+  position: absolute;
+  width: 34px;
+  height: 10px;
+  left: 120px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+.LockedValue {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  left: 120px;
+
+  font-family: Font Awesome 5 Free;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #424242;
+}
+.BatteryValue {
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  left: 120px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 10px;
+
+  /* identical to box height, or 71% */
+
+  color: #000000;
+}
+
+.Throttle {
+  position: absolute;
+  height: 10px;
+  left: 265px;
+  top: 29px;
+  margin-right: 11px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.Throttle i {
+  margin-right: 11px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 10px;
+  color: #66bb6a;
+}
+
+.Controller {
+  position: absolute;
+  height: 10px;
+  left: 265px;
+  top: 64px;
+  margin-right: 11px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.Controller i {
+  margin-right: 11px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 10px;
+  color: #66bb6a;
+}
+
+.Motor {
+  position: absolute;
+  height: 10px;
+  left: 265px;
+  top: 99px;
+  margin-right: 11px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.Motor i {
+  margin-right: 11px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 10px;
+  color: #66bb6a;
+}
+
+.Overload {
+  position: absolute;
+  height: 10px;
+  left: 265px;
+  top: 134px;
+  margin-right: 11px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.Overload i {
+  margin-right: 11px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 10px;
+  color: #66bb6a;
+}
+
+.Overcurrent {
+  position: absolute;
+  height: 10px;
+  left: 265px;
+  top: 169px;
+  margin-right: 11px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.Overcurrent i {
+  margin-right: 11px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 10px;
+  color: #66bb6a;
+}
+
+.staticsGraph {
+  position: absolute;
+  height: 22px;
+  left: 468px;
+}
+.staticsGraphTop {
+  position: relative;
+}
+
+.Statistics {
+  position: absolute;
+  width: 84px;
+  height: 22px;
+  left: 0px;
+  top: 3px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.bookingBtn {
+  position: absolute;
+  width: 87px;
+  height: 28px;
+  left: 100px;
+  background: #424242;
+  border-radius: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  border: none;
+}
+
+.EarningsBtn {
+  position: absolute;
+  left: 206px;
+  width: 80px;
+  height: 28px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: none;
+}
+
+.staticsGraphTopRight {
+  position: absolute;
+  height: 28px;
+  left: 444px;
+  display: flex;
+}
+
+.dataChangeBtn {
+  /* height: 28px; */
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-right: 10px;
+  border: none;
+}
+
+.Graph {
+  position: absolute;
+  width: 637px;
+  height: 225px;
+  left: 0px;
+  top: 35px;
+  background-color: #000000;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Part 3 */
+
+.recentTrip {
+  position: absolute;
+  width: 1075px;
+  height: 505px;
+  left: 30px;
+  top: 372px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.recentTripText {
+  position: absolute;
+  width: 111px;
+  height: 22px;
+  left: 0px;
+  top: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* identical to box height */
+
+  color: #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.graphContainer {
+  position: absolute;
+  width: 1075px;
+  height: 473px;
+  left: 0px;
+  top: 32px;
+
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chartVehicle {
+  font-family: sans-serif;
+  text-align: center;
 }
